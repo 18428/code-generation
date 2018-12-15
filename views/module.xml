@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+        <record id="code_generate_module_view" model="ir.ui.view">
+            <field name="name">code.generate.module.list</field>
+            <field name="model">code.generate.module</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="sequence"/>
+                    <field name="name" />
+                    <field name="summary" />
+                    <field name="description"/>
+                    <field name="author" />
+                    <field name="website" />
+                    <field name="category"/>
+                    <field name="version" />
+                    <field name="installable" />
+                    <field name="application"/>
+                    <field name="auto_install" />
+                </tree>
+            </field>
+        </record>
+        <record id="code_generate_module_form" model="ir.ui.view">
+            <field name="name">code.generate.module.form</field>
+            <field name="model">code.generate.module</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="code_model" string="模型定义" type="object"
+                            context="{'id':id,'name':name}" class="btn-primary" />
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="sequence"/>
+                            <field name="name" />
+                            <field name="summary" />
+                            <field name="description"/>
+                            <field name="author" />
+                            <field name="website" />
+                            <field name="category"/>
+                            <field name="version" />
+                            <field name="installable" />
+                            <field name="application"/>
+                            <field name="auto_install" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="code_generate_module" model="ir.actions.act_window">
+            <field name="name">Code Generate Module</field>
+            <field name="res_model">code.generate.module</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_code_generate_module_root" name="Code Generate Module" parent="menu_code_root" action="code_generate_module" groups="base.group_user" />
+    </data>
+</odoo>

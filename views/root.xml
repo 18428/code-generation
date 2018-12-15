@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="menu_code_root" name="Code Generation" web_icon="code-generate,static/description/icon.png" groups="base.group_user" />
+    </data>
+</odoo>

@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "{{module.name}}",
+
+    'summary': """
+        {{module.summary}},
+
+    'description': """
+        {{module.description}}
+    """,
+
+    'author': "{{module.author}}",
+    'website': "{{module.website}}",
+
+    'category': '{{module.category}}',
+    'version': '{{module.version}}',
+
+    # any module necessary for this one to work correctly
+    'depends': ['base'],
+
+    # always loaded
+    'data': [
+
+    ],
+    'installable': {{module.installable}},
+    'application': {{module.application}},
+    'auto_install': {{module.auto_install}},
+}
